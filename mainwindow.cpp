@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
         ui->com_lang->setCurrentIndex(langtype);
     }
 
-    ui->label_git->setText("<a href=\"https://www.example.com\">Click here to visit github code</a>");
+    ui->label_git->setText("<a href=\"https://github.com/dependon/IpTools\">Click here to visit github code</a>");
     ui->label_git->setTextFormat(Qt::RichText);
     ui->label_git->setOpenExternalLinks(true);
 }
