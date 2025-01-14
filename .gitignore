@@ -1,0 +1,51 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+build*/
+include*/
+
+*.pro.user*
+*.DS_Store
+*.qm
+*.autosave
+
+vendor/include/*
+vendor/lib/*
+
+.vscode/*
+
+*.log
+
+# debian
+debian/*
+!debian/changelog
+!debian/rules
+!debian/control
+!debian/compat
+!debian/source/*
+*.obj
+*.tlog
+*.exe
+*.ilk
+*.props
+*.vcxproj
+*.pdb
+*.filters
+/debug/moc_statusbarwidget.cpp
+/debug/moc_pushbutton.cpp
+/debug/moc_mainwidget.cpp
+/debug/moc_imageview.cpp
+/debug/moc_imagethread.cpp
+/debug/moc_application.cpp
+/ui_mainwidget.h
