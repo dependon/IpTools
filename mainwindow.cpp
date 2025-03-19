@@ -76,6 +76,15 @@ void MainWindow::slotIpInfoReceived(const QString &country, const QString &regio
     ui->city->setText(city);
     ui->isp->setText(isp);
     ui->ip->setText(query);
+
+    // 新增调试输出
+    qDebug() << "IP信息已接收:";
+    qDebug() << "查询IP:" << query;
+    qDebug() << "国家:" << country;
+    qDebug() << "地区:" << regionName;
+    qDebug() << "城市:" << city;
+    qDebug() << "ISP:" << isp;
+
 }
 
 void MainWindow::slotErrorOccurred(const QString &errorMessage)
@@ -93,7 +102,7 @@ void MainWindow::on_com_lang_currentIndexChanged(const QString &arg1)
     QString strLang = arg1;
     if(strLang == u8"English")
     {
-        ui->label_Country->setText(u8"Country");
+        ui->label_Country->setText(u8"Country/Region");
         ui->label_RegionName->setText(u8"Region Name");
         ui->label_City->setText(u8"City");
         ui->label_Isp->setText(u8"Internet Service Provider");
@@ -103,7 +112,7 @@ void MainWindow::on_com_lang_currentIndexChanged(const QString &arg1)
     }
     else if (strLang == u8"Deutsch")
     {
-        ui->label_Country->setText(u8"Land");
+        ui->label_Country->setText(u8"Land/Region");
         ui->label_RegionName->setText(u8"Region Name");
         ui->label_City->setText(u8"Stadt");
         ui->label_Isp->setText(u8"Internet Service Provider");
@@ -113,7 +122,7 @@ void MainWindow::on_com_lang_currentIndexChanged(const QString &arg1)
     }
     else if (strLang == u8"Español")
     {
-        ui->label_Country->setText(u8"País");
+        ui->label_Country->setText(u8"País / región");
         ui->label_RegionName->setText(u8"Nombre de la región");
         ui->label_City->setText(u8"Ciudad");
         ui->label_Isp->setText(u8"Proveedores de servicios de Internet");
@@ -123,7 +132,7 @@ void MainWindow::on_com_lang_currentIndexChanged(const QString &arg1)
     }
     else if (strLang == u8"Português-Brasil")
     {
-        ui->label_Country->setText(u8"Country");
+        ui->label_Country->setText(u8"País/Região");
         ui->label_RegionName->setText(u8"Nome da região");
         ui->label_City->setText(u8"Cidade");
         ui->label_Isp->setText(u8"Fornecedor de Serviços de Internet");
@@ -133,7 +142,7 @@ void MainWindow::on_com_lang_currentIndexChanged(const QString &arg1)
     }
     else if (strLang == u8"Français")
     {
-        ui->label_Country->setText(u8"Pays");
+        ui->label_Country->setText(u8"Pays / région");
         ui->label_RegionName->setText(u8"Nom de la région");
         ui->label_City->setText(u8"La ville");
         ui->label_Isp->setText(u8"Fournisseurs de services Internet");
@@ -143,7 +152,7 @@ void MainWindow::on_com_lang_currentIndexChanged(const QString &arg1)
     }
     else if (strLang == u8"日本語")
     {
-        ui->label_Country->setText(u8"国");
+        ui->label_Country->setText(u8"国/地域");
         ui->label_RegionName->setText(u8"地域名");
         ui->label_City->setText(u8"とし");
         ui->label_Isp->setText(u8"インターネットサービスプロバイダ");
@@ -153,7 +162,7 @@ void MainWindow::on_com_lang_currentIndexChanged(const QString &arg1)
     }
     else if (strLang == u8"中文")
     {
-        ui->label_Country->setText(u8"国家");
+        ui->label_Country->setText(u8"国家/地区");
         ui->label_RegionName->setText(u8"地区名称");
         ui->label_City->setText(u8"城市");
         ui->label_Isp->setText(u8"互联网服务提供商");
