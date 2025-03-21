@@ -10,7 +10,8 @@ void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
 {
     // 获取当前日期并格式化为 YYYY-MM-DD
     QString currentDate = QDateTime::currentDateTime().toString("yyyy-MM-dd");
-    QString logFileName = currentDate + ".log";
+    QString logFileName = "log/" + currentDate + ".log";
+    QDir().mkpath("log");
 
     QFile outFile(logFileName);
     outFile.open(QIODevice::WriteOnly | QIODevice::Append);
